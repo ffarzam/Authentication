@@ -1,8 +1,7 @@
-import json
 from typing import Any
 import jwt
 
-from fastapi import Request, HTTPException, status, Body
+from fastapi import Request, HTTPException, status
 from fastapi.security import HTTPBearer
 
 from db.redisdb import get_redis
