@@ -1,12 +1,10 @@
 from typing import Tuple
 from uuid import uuid4
+import jwt
 
 from fastapi import Request
-import jwt
-from redis import Redis
 
 from config.config import get_settings
-
 from schemas.tokens import AccessTokens, RefreshTokens
 
 settings = get_settings()
