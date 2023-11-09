@@ -1,0 +1,31 @@
+
+
+services:
+
+  auth:
+    build: .
+    container_name: auth
+    volumes:
+      - .:/code/
+    ports:
+      - 8001:8001
+    restart: always
+    networks:
+      - main
+
+
+#  filebeat:
+#    build:
+#      context: ./filebeat
+#    container_name: filebeat
+#    volumes:
+#      - ./fastapi-logs:/code/log
+#    depends_on:
+#      - auth
+#    networks:
+#      - main
+
+
+
+networks:
+  main:
